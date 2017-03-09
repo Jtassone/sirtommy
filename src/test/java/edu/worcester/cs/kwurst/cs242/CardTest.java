@@ -1,4 +1,4 @@
-/*
+package edu.worcester.cs.kwurst.cs242;/*
  *  Copyright (C) 2010-2015 Karl R. Wurst
  * 
  * This program is free software; you can redistribute it and/or modify
@@ -16,30 +16,29 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
  */
 
-package edu.worcester.cs.kwurst.cs242;
-
 import java.util.*;
 
 import static org.junit.Assert.*;
 
+import edu.worcester.cs.kwurst.cs242.Card;
 import org.junit.Before;
 import org.junit.Test;
 
-/** 
+/**
  * Tests for the Card class.
- * 
+ *
  * @author Karl R. Wurst
  * @version 29 March 2015
  */
 
 public class CardTest {
-    
-    Card testCard; 
+
+    Card testCard;
 
     @Before
     public void setUp() throws Exception {
         testCard = new Card(Card.Rank.THREE, Card.Suit.CLUBS);
-        
+
     }
 
     @Test
@@ -66,13 +65,13 @@ public class CardTest {
         assertFalse(testCard.equals(new Card(Card.Rank.FOUR, Card.Suit.CLUBS)));
         assertFalse(testCard.equals(new Card(Card.Rank.THREE, Card.Suit.HEARTS)));
     }
-    
+
     @Test
     public void testNewDeck() {
         ArrayList<Card> deck = Card.newDeck();
         assertEquals(deck.size(), 52);
         assertEquals(deck.get(0), new Card(Card.Rank.ACE, Card.Suit.CLUBS));
-        assertEquals(deck.get(51), new Card(Card.Rank.KING, Card.Suit.SPADES));        
+        assertEquals(deck.get(51), new Card(Card.Rank.KING, Card.Suit.SPADES));
     }
 
 }

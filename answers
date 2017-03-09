@@ -1,0 +1,25 @@
+1.
+    1. I used the command mvn compile.
+    2. It puts them in the target folder.
+    3. Maven created two other directories maven-archiver and maven-status
+       in maven-archiver is a pom properties file which just has the version artifact id and froup name
+       in the maven status folder are text documents that show the input and output files that maven took in and
+       created.
+2.
+    1.I used the command mvn test.
+    2. It put them in the target folder under test classes.
+    3.It created a surefire-reoprts folder with a test file and xml file inside showing what tests passed failed etc.
+3.
+    1. I used teh command mcn package.
+    2. It puts the jar in the target folder.
+    3. No other directories were created.
+4.
+    1. I used the command mvn clean
+    2. It got rid of the target folder and everything that was inside of it.
+5.
+    1. I used the command mvn site.
+    2. It puts the site directory in the target folder.
+    3.I used the index file to open it in my browser.
+    4. It created the css and images directories. Images holds the html files
+       and css holds the css to model those html files.
+    5. No it generates information based on the pom file.
