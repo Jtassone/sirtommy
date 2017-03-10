@@ -1,0 +1,27 @@
+
+Checkstyle
+    1. I put checkstyle under a reporting tab and then used mvn site to generate the report
+       as an html file.
+    2. Maven puts the classes under the site directory in the target folder.
+    3. There were a total of 151 errors found.
+    4. In the card class line 25, the error is "Line is longer than 80 characters". This
+       means that sun suggests a line length of no greater than 80 characters for readable code
+    5. In order to do this you would need to use custom checkstyle property expansion definitions and
+       go into the checkstyle xml file and create a child property element of the module.
+
+Findbugs
+    1. Same as checkstyle i put the plugin xml under the reporting tab and then used mvn site to
+       generate the report.
+    2. Maven puts the report under the site folder in the target directory.
+    3. There were 5 bugs 0 errors.
+    4. The error in the card class says that it defines equals and uses Object.hashcode().
+       This is saying it is not overriding hashcode and it is likely to violate the invarient that
+       equals objects must have equal hashcodes.
+
+PMD
+    1. Same as checkstyle and findbugs i put the plugin xml under the reporting tab and then used mvn site
+     to generate the report.
+    2. Maven puts the report files under the site folder in the target directory.
+    3. There were two violations found.
+    4. Yes it is the same error that findbugs found.
+    5.I would not have noticed that error looking at the code. 
